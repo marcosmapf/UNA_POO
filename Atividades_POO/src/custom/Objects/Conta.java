@@ -8,6 +8,8 @@ public abstract class Conta {
 	protected double saldo;
 	protected char status;
 	
+	//Fazer classe Cliente ao invés de ID cliente
+	
 	/*<--------------------------------------------------------------------------------------->*/
 	
 	public void depositar(int valor){
