@@ -1,0 +1,17 @@
+package custom.Objects;
+
+public class Triangulo implements FiguraGeometrica {
+
+	double base;
+	double altura;
+	
+	public Triangulo(double base, double altura){
+		this.base = base;
+		this.altura = altura;
+	}	
+	
+	@Override
+	public double getArea() {
+		return base * altura /2;
+	}
+}

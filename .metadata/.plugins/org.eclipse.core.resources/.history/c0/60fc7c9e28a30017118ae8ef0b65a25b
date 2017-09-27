@@ -1,0 +1,8 @@
+package custom.Objects;
+
+interface FiguraGeometrica {
+
+	double area;
+
+	 double getArea();
+}

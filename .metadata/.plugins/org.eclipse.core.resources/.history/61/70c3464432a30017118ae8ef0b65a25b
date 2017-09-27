@@ -1,0 +1,15 @@
+ package mainClass;
+ import custom.Objects.Triangulo;
+
+public class Lista02_Atividade02 {
+
+	public static void main(String[] args) {
+
+			Triangulo tri = new Triangulo(4, 5, 6);
+			area = tri.getArea();
+		}
+
+
+	}
+
+}

@@ -1,0 +1,53 @@
+package custom.Objects;
+
+public class Triangulo implements FiguraGeometrica {
+
+	double ladoA;
+	double ladoB;
+	double ladoC;
+	
+	public Triangulo(double ladoa, double ladob, double ladoc){
+		setLadoA(ladoa);
+		setLadoB(ladob);
+		setLadoC(ladoc);
+	}	
+	
+	@Override
+	public double getArea() {
+		
+	}
+	
+	public double getPerimetro(){
+		
+	}
+	
+	public double getDiagonal(){
+		
+	}
+
+	/*<--------------------------------------------------------------------------------------->*/
+		
+	public double getLadoA() {
+		return ladoA;
+	}
+
+	public void setLadoA(double lado) {
+		this.ladoA = lado;
+	}
+
+	public double getLadoB()) {
+		return ladoB;
+	}
+
+	public void setLadoB(double lado) {
+		this.ladBb = lado;
+	}
+
+	public double getLadoC() {
+		return ladoC;
+	}
+
+	public void setLadoC(double lado) {
+		this.ladoC = lado;
+	}
+}

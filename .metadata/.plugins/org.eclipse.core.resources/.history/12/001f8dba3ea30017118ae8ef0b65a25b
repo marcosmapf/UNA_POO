@@ -1,0 +1,19 @@
+package custom.Objects;
+
+public class ContaCorrente extends Conta {
+
+	private int chequeEspecial;
+	private double juros;
+	
+	@Override
+	public void sacar(int valor){
+		
+		if (valor < saldo){
+			saldo -= valor;
+		}
+		else if (valor < saldo + chequeEspecial){
+			chequeEspecial -= valor - saldo;
+			saldo = 0;
+		}		
+	}
+}

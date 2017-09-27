@@ -1,0 +1,10 @@
+package custom.Objects;
+
+public class Triangulo implements FiguraGeometrica {
+
+	public double getArea() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

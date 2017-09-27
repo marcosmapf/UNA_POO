@@ -1,0 +1,11 @@
+package mainClass;
+import custom.Objects.TrianguloRetangulo;
+
+public class Lista02_Atividade02 {
+
+	public static void main(String[] args) {
+		TrianguloRetangulo tri = new TrianguloRetangulo(3, 4)
+		double area = tri.getArea();
+		System.out.println(area);
+	}
+}

@@ -1,0 +1,13 @@
+package custom.Objects;
+
+public class Circulo implements FiguraGeometrica{
+
+	double raio;
+	
+	@Override
+	
+	public double getArea() {
+		return Math.pow(this.raio, 2) * Math.PI;
+	}
+
+}

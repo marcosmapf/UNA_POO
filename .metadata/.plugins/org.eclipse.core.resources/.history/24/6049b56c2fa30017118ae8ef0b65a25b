@@ -1,0 +1,60 @@
+package custom.Objects;
+
+import javax.xml.stream.util.EventReaderDelegate;
+
+public class Retangulo implements FiguraGeometrica {
+
+	private double base;	
+	private double altura;
+	
+	public Retangulo(double base, double altura){
+		this.base = validadeInput(base, "base");
+		this.altura = validadeInput(altura, "altura");
+	}
+	
+	/*<--------------------------------------------------------------------------------------->*/
+	
+	@Override
+	public double getArea() {
+		return this.base * this.altura;
+	}
+	
+	public double getPerimetro(){
+		return (2 * this.base) + (2* this.altura);
+	}
+	
+	public double getDiagonal(){
+		return Math.pow(Math.pow(this.base,2) + Math.pow(this.altura, 2), -2);
+	}
+	
+	private double validadeInput(double input, String nome){		
+		if (input > 0)
+			return input;
+		else
+			throw new IllegalArgumentException("nome");			
+	}
+	
+	/*<--------------------------------------------------------------------------------------->*/
+		
+	public double getBase() {
+		return this.base;
+	}
+
+	public void setBase(double base) {
+			this.base = base;
+	}
+
+	public double getAltura() {
+		return altura;
+	}
+
+	public void setAltura(double altura) {
+		if (altura >= 0)
+			this.altura = altura;
+		else{
+			System.out.println("A altura pode receber apenas valores maiores que zero. O valor padrão 1 será utilizado no lugar do infordo");
+			this.altura = 1;
+		}
+	}
+
+}

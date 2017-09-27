@@ -1,0 +1,8 @@
+package mainClass;
+import custom.Objects.TrianguloRetangulo;
+
+public class Lista02_Atividade02 {
+
+	public static void main(String[] args) {
+			
+}

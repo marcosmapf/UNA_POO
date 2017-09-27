@@ -1,0 +1,60 @@
+package custom.Objects;
+
+public class Triangulo implements FiguraGeometrica {
+
+	double ladoA;
+	double ladoB;
+	double ladoC;
+	
+	public Triangulo(double ladoa, double ladob, double ladoc){
+		setLadoA(ladoa);
+		setLadoB(ladob);
+		setLadoC(ladoc);
+	}	
+	
+	@Override
+	public double getArea() {
+		
+	}
+	
+	public double getPerimetro(){
+		double semiperimetro = (this.ladoA + this.ladoB + this.ladoC) / 2
+				
+	}
+	
+	public double getDiagonal(){
+		
+	}
+
+	/*<--------------------------------------------------------------------------------------->*/
+		
+	public double getLadoA() {
+		return ladoA;
+	}
+
+	public void setLadoA(double lado) {
+		if (lado > 0)
+			this.ladoA = lado;
+		else throw new IllegalArgumentException("O valor informado para o primeiro lado foi incorreto");
+	}
+
+	public double getLadoB() {
+		return ladoB;
+	}
+
+	public void setLadoB(double lado) {
+		if (lado > 0)
+			this.ladoB = lado;
+		else throw new IllegalArgumentException("O valor informado para o segundo lado foi incorreto");
+	}
+
+	public double getLadoC() {
+		return ladoC;
+	}
+
+	public void setLadoC(double lado) {
+		if (lado > 0)
+			this.ladoC = lado;
+		else throw new IllegalArgumentException("O valor informado para o terceiro lado foi incorreto");
+	}
+}

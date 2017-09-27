@@ -1,0 +1,55 @@
+package custom.Objects;
+
+public class TrianguloRetangulo implements FiguraGeometrica {
+
+	double base;
+	double altura;
+	double hipotenusa;
+	
+	public TrianguloRetangulo(double base, double altura){
+		setBase(base);
+		setAltura(altura);
+		setHipotenusa();
+	}	
+	
+	@Override
+	public double getArea() {
+		return (base * altura)
+	}
+	
+	public double getPerimetro(){
+		return ladoA + ladoB + ladoC; 
+	}
+
+	/*<--------------------------------------------------------------------------------------->*/
+		
+	public double getLadoA() {
+		return ladoA;
+	}
+
+	public void setLadoA(double lado) {
+		if (lado > 0)
+			this.ladoA = lado;
+		else throw new IllegalArgumentException("O valor informado para o primeiro lado foi incorreto");
+	}
+
+	public double getLadoB() {
+		return ladoB;
+	}
+
+	public void setLadoB(double lado) {
+		if (lado > 0)
+			this.ladoB = lado;
+		else throw new IllegalArgumentException("O valor informado para o segundo lado foi incorreto");
+	}
+
+	public double getLadoC() {
+		return ladoC;
+	}
+
+	public void setLadoC(double lado) {
+		if (lado > 0)
+			this.ladoC = lado;
+		else throw new IllegalArgumentException("O valor informado para o terceiro lado foi incorreto");
+	}
+}

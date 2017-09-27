@@ -1,0 +1,30 @@
+package mainClass;
+
+import custom.Objects.Professor;
+import custom.Objects.Secretaria;
+
+public class Atividade_01 {
+
+	public static void main(String[] args) {
+
+		System.out.println("Informações sobre funcionários\n"
+						 +"<----------------------------->");
+		Professor prof = new Professor();
+		prof.setCodigo(0);
+		prof.setNome ("Mark");
+		prof.setSobrenome("Allan Junho Song");
+		prof.setTitulacao("Doutorado");		
+		prof.imprimirDados();
+		
+		System.out.println();
+		
+		Secretaria sec = new Secretaria();
+		sec.setCodigo(1);
+		sec.setNome ("Daniela");
+		sec.setSobrenome("Rocha Bicalho");
+		sec.setEspecialidade("Novelo de lã");
+		sec.imprimirDados();
+		
+		System.out.println("<----------------------------->");
+	}
+}

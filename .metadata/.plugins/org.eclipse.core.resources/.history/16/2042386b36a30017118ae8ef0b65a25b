@@ -1,0 +1,23 @@
+package mainClass;
+import custom.Objects.TrianguloRetangulo;
+
+public class Lista02_Atividade02 {
+
+	public static void main(String[] args) {
+			
+		TrianguloRetangulo tri = construirTrianguloRet(3,4);
+		double area = tri.getArea();
+		System.out.println(area);
+	}
+	
+	public TrianguloRetangulo construirTrianguloRet(double base, double altura){
+		TrianguloRetangulo tri;
+		try{
+			tri = new TrianguloRetangulo(base, altura);
+		}
+		catch (IllegalArgumentException e){
+			construirTrianguloRet(base, altura);
+		}
+		return tri;
+	}
+}

@@ -1,0 +1,44 @@
+package custom.Objects;
+
+public class ContaCorrente extends Conta {
+
+	private double chequeEspecial;
+	private int limiteSaque;
+	private static final double juros = 0.04;
+	
+	@Override
+	public void sacar(int valor){
+		
+		if (valor < saldo){
+			saldo -= valor;
+		}
+		else if (valor < saldo + chequeEspecial){
+			chequeEspecial -= valor - saldo;
+			saldo = 0;
+		}		
+	}
+
+	public static double getJuros() {
+		return juros;
+	}
+
+	public static void setJuros(double juros) {
+		juros = juros;
+	}
+
+	public int getLimiteSaque() {
+		return limiteSaque;
+	}
+
+	public void setLimiteSaque(int limiteSaque) {
+		this.limiteSaque = limiteSaque;
+	}
+
+	public double getChequeEspecial() {
+		return chequeEspecial;
+	}
+
+	public void setChequeEspecial(double chequeEspecial) {
+		this.chequeEspecial = chequeEspecial;
+	}
+}

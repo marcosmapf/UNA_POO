@@ -1,0 +1,13 @@
+package custom.Objects;
+
+public class Circulo implements FiguraGeometrica{
+
+	float raio;
+	
+	@Override
+	public float getArea() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

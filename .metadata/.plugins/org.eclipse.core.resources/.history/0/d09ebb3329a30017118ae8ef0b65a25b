@@ -1,0 +1,11 @@
+package custom.Objects;
+
+public class Retangulo implements FiguraGeometrica {
+
+	@Override
+	public double getArea() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

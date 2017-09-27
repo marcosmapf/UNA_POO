@@ -1,0 +1,44 @@
+package custom.Objects;
+
+public abstract class Conta {
+
+	/*
+	agencia
+	Numero da conta
+	saldo
+	Cliente
+	
+	deposito
+	saque (Da conta poupanca verifica se esta dentro do limite do cheque especial)
+	verificarExtrato
+	transferência
+	
+	Conta corrente tem limite de saque
+	Conta poupanca tem rendimento da poupanca
+	Conta poupanca tem data de aniversario
+	Conta poupanca tem limite cheque especial
+	*/
+	
+	protected int idConta;
+	protected int idAgencia;
+	protected int idCliente;
+	protected double saldo;
+	
+	public void depositar(int valor){
+		
+		this.saldo += valor;
+	}
+	
+	public void sacar(int valor){
+
+		if (valor < saldo){
+			saldo -= valor;
+		}
+		
+		System.out.print("Imagine que está saindo da máquina " + valor + " reais :D");
+	}
+	
+	public String checkBalance(){
+		return "R$: " + this.saldo;
+	}
+}

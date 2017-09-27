@@ -1,0 +1,5 @@
+package custom.Objects;
+
+public class ContaCorrente extends Conta {
+
+}

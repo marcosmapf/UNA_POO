@@ -1,0 +1,49 @@
+package custom.Objects;
+
+public class Triangulo implements FiguraGeometrica {
+
+	double ladoa;
+	double ladob;
+	double ladoc;
+	
+	public Triangulo(double base, double altura){
+		this.base = base;
+		this.altura = altura;
+	}	
+	
+	@Override
+	public double getArea() {
+		return base * altura /2;
+	}
+	
+	public double getPerimetro(){
+		return (2 * this.base) + (2* this.altura);
+	}
+	
+	public double getDiagonal(){
+		return Math.pow(Math.pow(this.base,2) + Math.pow(this.altura, 2), -2);
+	}
+
+	/*<--------------------------------------------------------------------------------------->*/
+		
+	public double getBase() {
+		return this.base;
+	}
+
+	public void setBase(double base) {
+		if (base > 0)
+			this.base = base;
+		else throw new IllegalArgumentException("O valor informado para a base foi incorreto");
+	}
+
+	public double getAltura() {
+		return altura;
+	}
+
+	public void setAltura(double altura) {
+		if (altura > 0)
+			this.altura = altura;
+		else throw new IllegalArgumentException("O valor informado para a altura foi incorreto");
+	}
+}
+}

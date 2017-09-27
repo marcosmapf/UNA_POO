@@ -1,0 +1,22 @@
+package custom.Objects;
+
+public class ContaCorrente extends Conta {
+
+	private int limiteSaque;
+	private int chequeEspecial;
+	private double juros;
+	
+	@Override
+	public void sacar(){
+		
+	}
+	
+	
+}
+
+saque (Da conta poupanca verifica se esta dentro do limite do cheque especial)
+
+Conta corrente tem limite de saque
+Conta poupanca tem rendimento da poupanca
+Conta poupanca tem data de aniversario
+Conta poupanca tem limite cheque especial
