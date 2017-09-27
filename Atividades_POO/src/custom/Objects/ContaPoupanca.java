@@ -7,11 +7,11 @@ public class ContaPoupanca extends Conta {
 	private double rendimento;
 	private Date aniversario;
 	
-	public ContaPoupanca(int idConta, int idAgencia, int idCliente, double saldo, char status, double rendimento, Date aniversario){
+	public ContaPoupanca(int idConta, int idAgencia, Cliente cliente, char status, double rendimento, Date aniversario){
 		setIdConta(idConta);
 		setIdAgencia(idAgencia);
-		setIdCliente(idCliente);
-		setSaldo(saldo);
+		setCliente(cliente);
+		setSaldo(0);
 		setStatus(status);
 		setRendimento(rendimento);
 		setAniversario(aniversario);
@@ -30,6 +30,5 @@ public class ContaPoupanca extends Conta {
 	}
 	public void setAniversario(Date aniversario) {
 		this.aniversario = aniversario;
-	}
-	
+	}	
 }

@@ -4,7 +4,7 @@ public abstract class Conta {
 
 	protected int idConta;
 	protected int idAgencia;
-	protected int idCliente;
+	protected Cliente cliente;
 	protected double saldo;
 	protected char status;
 	
@@ -21,7 +21,6 @@ public abstract class Conta {
 
 		if (valor < saldo){
 			saldo -= valor;
-			System.out.println("Imagine que está saindo da máquina " + valor + " reais :D");
 		}
 		else System.out.println("Saldo insuficiente para realizar a operação");		
 	}
@@ -55,14 +54,6 @@ public abstract class Conta {
 		this.idAgencia = idAgencia;
 	}
 
-	public int getIdCliente() {
-		return idCliente;
-	}
-
-	public void setIdCliente(int idCliente) {
-		this.idCliente = idCliente;
-	}
-
 	public double getSaldo() {
 		return saldo;
 	}
@@ -78,4 +69,38 @@ public abstract class Conta {
 	public void setStatus(char status) {
 		this.status = status;
 	}
+	
+	public Cliente getCliente(){
+		return this.cliente;
+	}
+	
+	public void setCliente(Cliente cliente){
+		this.cliente = cliente;
+	}
+	
+	/*<--------------------------------------------------------------------------------------->*/
+	
+	public String getNomeFromCliente() {
+		return cliente.getNome();
+	}
+
+	public void setNomeFromCliente(String nome) {
+		this.cliente.setNome(nome);
+	}
+	
+	public String getSobrenomeFromCliente() {
+		return cliente.getSobrenome();
+	}
+
+	public void setSobrenomeFromCliente(String sobrenome) {
+		this.cliente.setSobrenome(sobrenome);
+	}
+	
+	public int getIdadeFromCliente() {
+		return cliente.getIdade();
+	}
+
+	public void setIdadeFromCliente(int idade) {
+		this.cliente.setIdade(idade);
+	}	
 }

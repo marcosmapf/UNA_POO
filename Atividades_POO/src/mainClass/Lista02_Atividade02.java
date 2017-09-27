@@ -6,6 +6,7 @@ import custom.Objects.Retangulo;
 public class Lista02_Atividade02 {
 
 	public static void main(String[] args) {
+		
 		TrianguloRetangulo tri = new TrianguloRetangulo(3,4);
 		Circulo cir = new Circulo(3);
 		Retangulo ret = new Retangulo(5,8);

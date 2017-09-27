@@ -6,12 +6,12 @@ public class ContaCorrente extends Conta {
 	private int limiteSaque;
 	private static double juros = 0.04;
 
-	public ContaCorrente(int idConta, int idAgencia, int idCliente, double saldo, char status, double chequeEspecial, int limiteSaque){
+	public ContaCorrente(int idConta, int idAgencia, Cliente Cliente, char status, double chequeEspecial, int limiteSaque){
 		setIdConta(idConta);
 		setIdAgencia(idAgencia);
-		setIdCliente(idCliente);
-		setSaldo(saldo);
+		setCliente(Cliente);
 		setStatus(status);
+		setSaldo(0);
 		setChequeEspecial(chequeEspecial);
 		setLimiteSaque(limiteSaque);
 	}

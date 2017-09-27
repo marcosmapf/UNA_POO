@@ -1,0 +1,67 @@
+package mainClass;
+
+import java.sql.Date;
+
+import custom.Objects.Cliente;
+import custom.Objects.Conta;
+import custom.Objects.ContaCorrente;
+import custom.Objects.ContaPoupanca;
+
+public class Lista02_Atividade03 {
+
+	public static void main(String[] args) {
+		
+		Cliente cli1 = new Cliente(1, "Marcos", "de Andrade", 23);
+		Cliente cli2 = new Cliente(2, "Marina", "Emelly", 24);
+		Cliente cli3 = new Cliente(3, "Felippe","Weber", 22);
+		Cliente cli4 = new Cliente(4, "Messias", "Martins", 24);
+		Cliente cli5 = new Cliente(5, "Valdirene", "Aparecida", 22);
+		
+		ContaCorrente cont1 = new ContaCorrente(1, 10, cli1, 'B', 300, 1000);
+		ContaCorrente cont2 = new ContaCorrente(2, 15, cli2, 'A', 450, 1000);
+		ContaCorrente cont3 = new ContaCorrente(3, 21, cli3, 'C', 280, 1000);
+		
+		ContaPoupanca cont4 = new ContaPoupanca(1, 10, cli4, 'A', 0.015, new Date(System.currentTimeMillis()));
+		ContaPoupanca cont5 = new ContaPoupanca(1, 10, cli5, 'D', 0.015, new Date(System.currentTimeMillis() - 1232794121));
+		
+		imprimirDados(cont1);
+		imprimirDados(cont2);
+		imprimirDados(cont3);
+		imprimirDados(cont4);
+		imprimirDados(cont5);
+	}
+	
+	public static void imprimirDados(Conta conta){
+		
+		if (conta instanceof ContaCorrente){
+			ContaCorrente contaC = (ContaCorrente) conta;
+			System.out.println(
+					"Conta: " + contaC.getIdConta() +
+					"\nAgência: " + contaC.getIdAgencia() +
+					"\n<------------------------>" + 
+					"\nNome: " + contaC.getNomeFromCliente() + " " + contaC.getSobrenomeFromCliente() +
+					"\nIdade: " + contaC.getIdadeFromCliente() + " anos" +
+					"\nStatus: " + contaC.getStatus() +
+					"\nSaldo: " + contaC.getSaldo() +
+					"\nLimite do Cheque Especial: " + contaC.getChequeEspecial() +
+					"\nLimite de Saque: " + contaC.getLimiteSaque() +
+					"\n<------------------------>\n"
+					);
+		}
+		else if (conta instanceof ContaPoupanca){
+			ContaPoupanca contaP = (ContaPoupanca) conta;
+			System.out.println(
+					"Conta: " + contaP.getIdConta() +
+					"\nAgência: " + contaP.getIdAgencia() +
+					"\n<------------------------>" + 
+					"\nNome: " + contaP.getNomeFromCliente() + " " + conta.getSobrenomeFromCliente() +
+					"\nIdade: " + contaP.getIdadeFromCliente() + " anos" +
+					"\nStatus: " + contaP.getStatus() +
+					"\nSaldo: " + contaP.getSaldo() +
+					"\nRendimento: " + contaP.getRendimento() +
+					"\nAniversário: " + contaP.getAniversario() +
+					"\n<------------------------>\n"
+			);
+		}
+	}
+}

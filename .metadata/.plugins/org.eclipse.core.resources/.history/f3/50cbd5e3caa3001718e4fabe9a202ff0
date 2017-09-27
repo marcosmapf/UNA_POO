@@ -1,0 +1,16 @@
+package mainClass;
+
+import custom.Objects.Cliente;
+
+public class Lista02_Atividade03 {
+
+	public static void main(String[] args) {
+	
+		
+		Cliente cli1 = new Cliente();
+		Cliente cli2 = new Cliente();
+		Cliente cli3 = new Cliente();
+		Cliente cli4 = new Cliente();
+		Cliente cli5 = new Cliente();
+	}
+}

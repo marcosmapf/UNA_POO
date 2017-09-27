@@ -1,0 +1,25 @@
+package mainClass;
+
+import custom.Objects.Cliente;
+import custom.Objects.ContaCorrente;
+
+public class Lista02_Atividade03 {
+
+	public static void main(String[] args) {
+	
+		
+		Cliente cli1 = new Cliente(1, "Marcos", "de Andrade", 23);
+		Cliente cli2 = new Cliente(2, "Marina", "Emelly", 24);
+		Cliente cli3 = new Cliente(3, "Felippe","Weber", 22);
+		Cliente cli4 = new Cliente(4, "Messias", "Martins", 24);
+		Cliente cli5 = new Cliente(5, "Valdirene", "Aparecida", 22);
+		
+		ContaCorrente cont1 = new ContaCorrente(1, 10, cli1, 'B', 300, 1000);
+		ContaCorrente cont2 = new ContaCorrente(2, 15, cli2, 'A', 450, 1000);
+		ContaCorrente cont3 = new ContaCorrente(3, 21, cli3, 'C', 280, 1000);
+		
+		ContaPoupanca cont4 = new ContaPoupanca(1, 10, cli1, 'B', 0.015, 24/07/1994);
+		contaPoupac
+		
+	}
+}
